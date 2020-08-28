@@ -16,11 +16,12 @@ const forecast = (lat,lon,callback) => {
        else
        {
            callback(undefined,
-               'It is '+body.current.weather_descriptions[0]+'but feels like '
-               +body.current.feelslike+' degree Fahrenhit'
+               'It is '+body.current.weather_descriptions[0]+' but feels like '
+               +body.current.feelslike+' degree Fahrenhit.'+' Weather Description is '+body.current.weather_descriptions[0]+'. Wind Speed is about '+body.current.wind_speed+' mph blowing at an angle of '+body.current.wind_degree+" degress "+body.current.wind_dir+'. Precipitation level is '+body.current.precip+' and humidity level is '+body.current.humidity+'. The visibility level is '+body.current.visibility+' and uv index is about '+body.current.uv_index+'. The weather is recorded at '+body.location.localtime+'.'
            )
        }
    })
 }
 
 module.exports=forecast
+
